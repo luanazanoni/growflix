@@ -1,171 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="referrer" content="no-referrer" />
   <title>Growflix - Todos os vídeos da Growdev em um só lugar.</title>
-  <!-- 
-    INSTRUÇÃO: Baixe o Bootstrap 5.3.0 em https://getbootstrap.com/docs/5.3/getting-started/download/
-    e coloque os arquivos em assets/libs/bootstrap-5.3.0/css/ e assets/libs/bootstrap-5.3.0/js/
-    Por enquanto, usando CDN:
-  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/css/index.css" />
+  <link rel="shortcut icon" href="./src/images/growdev-logo.png" type="image/x-icon" />
 </head>
-<body class="index-page">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark px-4 py-3 position-absolute w-100" style="z-index:100;">
-    <a class="navbar-brand" href="index.html">
-      <img src="https://growflix-project.vercel.app/src/images/logo-growflix.svg" alt="Logo Growflix" height="32" />
-    </a>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero-section d-flex flex-column align-items-center justify-content-center text-center text-white">
-    <div class="hero-overlay"></div>
-    <div class="hero-bg-videos"></div>
-    <div class="container position-relative" style="z-index:2;">
-      <h1 class="hero-title fw-bold mb-3">Growcasts, webinars e<br>muito mais. Sem limites.</h1>
-      <p class="hero-subtitle mb-1">Assista onde quiser</p>
-      <p class="mb-4 text-white-50">Pronto para assistir?</p>
-      <a href="home.html" class="btn btn-danger btn-lg px-5 py-2 fw-bold">Vamos lá!</a>
-    </div>
-  </section>
-
-  <!-- Feature: TV -->
-  <section class="feature-section border-top border-secondary">
-    <div class="container py-5">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-white">
-          <h2 class="fw-bold mb-3">Aproveite na TV.</h2>
-          <p class="text-white-50 fs-5">Assista em Smart TVs,<br>PlayStation, Xbox, Chromecast<br>e outros dispositivos.</p>
-        </div>
-        <div class="col-md-6 text-center">
-          <img src="https://growflix-project.vercel.app/src/images/tela-tv-dia-dev.png" alt="TV" class="img-fluid feature-img" />
-        </div>
+<body>
+  <header class="container-fluid bg-black banner-index">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./src/images/logo-growflix.svg" alt="Logo Growflix" width="120" height="45" />
+        </a>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Feature: Devices -->
-  <section class="feature-section border-top border-secondary">
-    <div class="container py-5">
-      <div class="row align-items-center flex-row-reverse">
-        <div class="col-md-6 text-white text-md-end">
-          <h2 class="fw-bold mb-3">Assista quando<br>quiser.</h2>
-          <p class="text-white-50 fs-5">Assista no celular, tablet, Smart TV ou<br>notebook sem pagar a mais por isso.</p>
-        </div>
-        <div class="col-md-6 text-center">
-          <img src="https://growflix-project.vercel.app/src/images/devices.png" alt="Devices" class="img-fluid feature-img" />
-        </div>
+    <div class="text-center pt-5">
+      <p class="text-light display-1 fw-bold">
+        Growcasts, webinars e <br />
+        muito mais. Sem limites.
+      </p>
+    </div>
+
+    <div class="text-center pt-2">
+      <p class="fs-2 text-light">Assista onde quiser</p>
+    </div>
+
+    <div class="text-center pt-2">
+      <p class="fs-5 text-light">Pronto para assistir?</p>
+    </div>
+
+    <div class="text-center pt-2 pb-5">
+      <a href="./home.html">
+        <button type="button" class="btn btn-netflix">Vamos lá!</button>
+      </a>
+    </div>
+  </header>
+
+  <main class="container bg-black text-center">
+    <div class="row p-2 p-md-5">
+      <div class="col-12 col-sm-6 pt-5 text-center text-sm-start">
+        <p class="text-light display-4 fw-bold">Aproveite na TV.</p>
+        <p class="text-light fs-3">
+          Assista em Smart TVs, <br />
+          PlayStation, Xbox, Chromecast <br />
+          e outros dispositivos.
+        </p>
+      </div>
+      <div class="col-12 col-sm-6 d-flex justify-content-center">
+        <img src="./src/images/tela-tv-dia-dev.png" class="img-fluid align-self-center" alt="TV com Growflix" />
       </div>
     </div>
-  </section>
 
-  <!-- FAQ Section -->
-  <section class="feature-section border-top border-secondary">
-    <div class="container py-5">
-      <h2 class="text-white fw-bold text-center mb-4">Perguntas frequentes</h2>
-      <div class="accordion" id="faqAccordion">
-        <div class="accordion-item faq-item mb-2 border-0">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-              O que é a Growflix?
-            </button>
-          </h2>
-          <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body text-white-50">
-              Growflix é um site que oferece acesso a todos os conteúdos em vídeo da Growdev, abrangendo uma variedade de tópicos relacionados à tecnologia e programação.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item faq-item mb-2 border-0">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-              Quanto custa a Growflix?
-            </button>
-          </h2>
-          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body text-white-50">
-              A Growflix é uma plataforma de acesso gratuito, sem custos associados para os usuários.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item faq-item mb-2 border-0">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-              Onde posso assistir?
-            </button>
-          </h2>
-          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body text-white-50">
-              Você pode assistir aos vídeos da Growflix diretamente em seu site oficial, proporcionando facilidade de acesso e conveniência aos espectadores.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item faq-item mb-2 border-0">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-              O que eu posso assistir na Growflix?
-            </button>
-          </h2>
-          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body text-white-50">
-              Na Growflix, você encontrará todo o conteúdo da Growdev relacionado a tecnologia e programação, oferecendo uma ampla gama de recursos educativos e informativos.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item faq-item mb-2 border-0">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-              A Growflix é adequada para crianças?
-            </button>
-          </h2>
-          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body text-white-50">
-              Sim, a Growflix é adequada para crianças, oferecendo conteúdo educativo e instrutivo, garantindo uma experiência segura e enriquecedora para os jovens aprendizes.
-            </div>
-          </div>
-        </div>
+    <div class="row p-2 p-md-5">
+      <div class="col-12 col-sm-6 d-flex justify-content-center">
+        <img src="./src/images/devices.png" class="img-fluid align-self-center" alt="Dispositivos" />
       </div>
-
-      <!-- CTA -->
-      <div class="text-center mt-5">
-        <p class="text-white-50 mb-2">Pronto para assistir?</p>
-        <a href="home.html" class="btn btn-danger btn-lg px-5 py-2 fw-bold">Vamos lá!</a>
+      <div class="col-12 col-sm-6 pt-5 text-center text-sm-start">
+        <p class="text-light display-4 fw-bold">
+          Assista quando <br />
+          quiser.
+        </p>
+        <p class="text-light fs-3">
+          Assista no celular, tablet, Smart TV ou <br />
+          notebook sem pagar a mais por isso.
+        </p>
       </div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-top border-secondary py-5">
-    <div class="container text-white-50">
-      <p class="mb-3">Dúvidas? Ligue 0800 591 8942</p>
-      <div class="row row-cols-2 row-cols-md-4 g-2 mb-4">
-        <div class="col"><a href="#" class="footer-link">Perguntas frequentes</a></div>
-        <div class="col"><a href="#" class="footer-link">Relações com investidores</a></div>
-        <div class="col"><a href="#" class="footer-link">Formas de assistir</a></div>
-        <div class="col"><a href="#" class="footer-link">Informações corporativas</a></div>
-        <div class="col"><a href="#" class="footer-link">Só na Growflix</a></div>
-        <div class="col"><a href="#" class="footer-link">Central de Ajuda</a></div>
-        <div class="col"><a href="#" class="footer-link">Carreiras</a></div>
-        <div class="col"><a href="#" class="footer-link">Termos de Uso</a></div>
-        <div class="col"><a href="#" class="footer-link">Entre em contato</a></div>
-        <div class="col"><a href="#" class="footer-link">Conta</a></div>
-        <div class="col"><a href="#" class="footer-link">Resgatar cartão pré-pago</a></div>
-        <div class="col"><a href="#" class="footer-link">Privacidade</a></div>
-        <div class="col"><a href="#" class="footer-link">Teste de velocidade</a></div>
-        <div class="col"><a href="#" class="footer-link">Media Center</a></div>
-        <div class="col"><a href="#" class="footer-link">Comprar cartão pré-pago</a></div>
-        <div class="col"><a href="#" class="footer-link">Preferências de cookies</a></div>
-        <div class="col"><a href="#" class="footer-link">Avisos legais</a></div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="text-light display-4 fw-bold">Perguntas frequentes</p>
       </div>
-      <p class="small">Growflix Growdev</p>
+      <div class="col-12 col-sm-8 offset-sm-2">
+        <div class="accordion accordion-flush" id="faq">
+          <div class="accordion-item bg-dark text-white-50">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq-1">
+                O que é a Growflix?
+              </button>
+            </h2>
+            <div id="faq-1" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                Growflix é um site que oferece acesso a todos os conteúdos em vídeo da Growdev,
+                abrangendo uma variedade de tópicos relacionados à tecnologia e programação.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-dark text-white-50">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq-2">
+                Quanto custa a Growflix?
+              </button>
+            </h2>
+            <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                A Growflix é uma plataforma de acesso gratuito, sem custos associados para os usuários.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-dark text-white-50">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq-3">
+                Onde posso assistir?
+              </button>
+            </h2>
+            <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                Você pode assistir aos vídeos da Growflix diretamente em seu site oficial,
+                proporcionando facilidade de acesso e conveniência.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-dark text-white-50">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq-4">
+                O que eu posso assistir na Growflix?
+              </button>
+            </h2>
+            <div id="faq-4" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                Na Growflix, você encontrará todo o conteúdo da Growdev relacionado a tecnologia
+                e programação, oferecendo uma ampla gama de recursos educativos e informativos.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-dark text-white-50">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq-5">
+                A Growflix é adequada para crianças?
+              </button>
+            </h2>
+            <div id="faq-5" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">
+                Sim, a Growflix é adequada para crianças, oferecendo conteúdo educativo e instrutivo,
+                garantindo uma experiência segura e enriquecedora para os jovens aprendizes.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 text-center pt-5">
+        <p class="text-light fs-5">Pronto para assistir?</p>
+      </div>
+      <div class="col-12 text-center pt-2 pb-5">
+        <a href="./home.html">
+          <button type="button" class="btn btn-netflix">Vamos lá!</button>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container-fluid">
+    <div class="container">
+      <div class="row small text-white-50">
+
+        <div class="col-12 pt-5">Dúvidas? Ligue 0800 591 8942</div>
+
+        <div class="col-6 col-sm-3 pt-5">
+          <p>Perguntas frequentes</p>
+          <p>Relações com investidores</p>
+          <p>Formas de assistir</p>
+          <p>Informações corporativas</p>
+          <p>Só na Growflix</p>
+        </div>
+
+        <div class="col-6 col-sm-3 pt-5">
+          <p>Central de Ajuda</p>
+          <p>Carreiras</p>
+          <p>Termos de Uso</p>
+          <p>Entre em contato</p>
+        </div>
+
+        <div class="col-6 col-sm-3 pt-5">
+          <p>Conta</p>
+          <p>Resgatar cartão pré-pago</p>
+          <p>Privacidade</p>
+          <p>Teste de velocidade</p>
+        </div>
+
+        <div class="col-6 col-sm-3 pt-5">
+          <p>Media Center</p>
+          <p>Comprar cartão pré-pago</p>
+          <p>Preferências de cookies</p>
+          <p>Avisos legais</p>
+        </div>
+
+        <div class="col-12 pt-5 pb-5">Growflix Growdev</div>
+      </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

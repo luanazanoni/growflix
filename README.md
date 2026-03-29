@@ -1,38 +1,33 @@
-# Growflix 🎬
+# 🎬 Growflix
 
-Site de streaming inspirado na Netflix, com conteúdos em vídeo da Growdev.
+> Site de streaming desenvolvido como desafio do curso **Full Stack Web Developer** da [Growdev](https://www.growdev.com.br/).
 
-## Estrutura de Pastas
+---
 
-```
-growflix/
-├── assets/
-│   ├── images/          ← Imagens do projeto
-│   └── libs/
-│       └── bootstrap-5.3.0/
-│           ├── css/     ← bootstrap.min.css
-│           └── js/      ← bootstrap.bundle.min.js
-├── css/
-│   └── style.css
-├── js/
-│   ├── movies.js        ← Array de vídeos
-│   └── home.js          ← Lógica de renderização do DOM
-├── index.html           ← Página de entrada (landing)
-└── home.html            ← Página principal com os vídeos
-```
+## 📖 Sobre o projeto
 
-## Tecnologias Utilizadas
+O **Growflix** é um site de streaming inspirado no layout da Netflix, com conteúdos em vídeo exclusivos da Growdev. O desafio consistiu em reproduzir fielmente o layout fornecido, aplicando na prática os conhecimentos adquiridos durante o curso.
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- Bootstrap 5.3
+---
 
-## Funcionalidades
+## ✨ Funcionalidades
 
-- **index.html**: Landing page estilo Netflix com hero, seções de features, FAQ e footer
-- **home.html**: Página principal com navbar fixa, banner hero, seções de vídeos por categoria
-- Vídeos carregados **dinamicamente** via JavaScript + manipulação do DOM
-- Array `movies` com todos os vídeos organizados por categoria
-- Modal de reprodução de vídeos do YouTube
-- Design responsivo com Bootstrap
+- 🎥 Interface estilo Netflix
+- 📂 Vídeos organizados por categorias
+- ▶️ Modal para assistir os vídeos
+- 📱 Layout responsivo
+
+---
+
+## 🚀 Tecnologias utilizadas
+
+![HTML](https://img.shields.io/badge/HTML5-f25e02?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-2d84e0?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-1f1f1f?style=for-the-badge&logo=javascript&logoColor=yellow)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+---
+
+## 👩‍💻 Desenvolvedora
+
+Feito por **Luana Reis Zanoni**
